@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<div class="reservation-page">
+  <h1>Make a Reservation</h1>
+  <form class="reservation-form">
+    <div class="form-group">
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required>
+    </div>
+    <div class="form-group">
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" required>
+    </div>
+    <div class="form-group">
+      <label for="occasion">Special Occasion</label>
+      <select id="occasion" name="occasion">
+        <option value="">Select an occasion</option>
+        <option value="birthday">Birthday</option>
+        <option value="anniversary">Anniversary</option>
+        <option value="business">Business Dinner</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="notes">Special Requests</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+    </div>
+    <button type="submit">Request Reservation</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
